@@ -1,4 +1,4 @@
-using NetworkLayout.Circular
+using NetworkLayout
 using LightGraphs
 
 """
@@ -85,6 +85,7 @@ function create_chord_plot(affinity_mat; labels::Vector{String} = Vector{String}
     
     traces=Array{PlotlyJS.GenericTrace{Dict{Symbol,Any}},1}()
     
+    thresh_dist, params = chord_parameters()
     
     # Bezier curves:
     for e in edges(G)
@@ -108,12 +109,12 @@ function create_chord_plot(affinity_mat; labels::Vector{String} = Vector{String}
         push!(traces, line_trace)
     end
     
-    node_trace = scatter(;x=locs_x, y=locs_y, mode="markers",
-                    marker=attr(symbol="circle-open", size=mesh_counts[count_perm[2:topn]]/50, color="rgba(0,51,181, 0.85)"),
-                    hoverinfo="none"
-                    ) #, mode="text",textposition="top", text=labels, opacity=0.8)
+    # node_trace = scatter(;x=locs_x, y=locs_y, mode="markers",
+    #                 marker=attr(symbol="circle-open", size=mesh_counts[count_perm[2:topn]]/50, color="rgba(0,51,181, 0.85)"),
+    #                 hoverinfo="none"
+    #                 ) #, mode="text",textposition="top", text=labels, opacity=0.8)
     
-    push!(traces, node_trace)
+    # push!(traces, node_trace)
     
     
     all_an = []
