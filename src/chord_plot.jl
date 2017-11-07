@@ -125,7 +125,8 @@ function create_chord_plot(affinity_mat; labels::Vector{String} = Vector{String}
     end
     
     
-    layout = Layout(showlegend=false, width=900, height=1100, showgrid=false,
+    layout = Layout(showlegend=false, width=930, height=1000, showgrid=false,
+                    margin= Dict(:t=> 70, :r=> 0, :l=> 0, :b=>0),
                     xaxis=attr(showline=false, zeroline=false, showgrid=false, showticklabels=false),
                     yaxis=attr(showline=false, zeroline=false, showgrid=false, showticklabels=false),
                     annotations = all_an)
