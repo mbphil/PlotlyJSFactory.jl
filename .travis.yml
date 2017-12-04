@@ -9,6 +9,10 @@ env:
   - GROUP=Examples
 notifications:
   email: false
+addons:
+  apt:
+    packages:
+    - hdf5-tools
 script:
 - julia --check-bounds=yes -e 'Pkg.update();
           Pkg.clone(pwd(), "PlotlyJSFactory");
