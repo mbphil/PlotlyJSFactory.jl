@@ -14,7 +14,9 @@ script:
           Pkg.clone(pwd(), "PlotlyJSFactory");
           Pkg.build("PlotlyJSFactory");
           Pkg.add("NBInclude");
+          Pkg.build("NBInclude");
           Pkg.add("JLD");
+          Pkg.build("JLD");
           using NBInclude;
           if ENV["GROUP"] == "Examples"
             nbinclude(Pkg.dir("PlotlyJSFactory")*"/examples/chord_plot.ipynb")
