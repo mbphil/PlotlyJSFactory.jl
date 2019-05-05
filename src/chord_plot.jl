@@ -139,11 +139,11 @@ function create_chord_plot(affinity_mat::Matrix; labels::Vector{String})::Plotly
     create_chord_plot(dropzeros(sparse(affinity_mat)), labels = labels)
 end
 
-# I had trouble to load SparseMatrix via jld, but after loading jld-file works with ..
-function fix_coords(sparsejld)
-    SparseMatrixCSC(sparsejld.m,
-                    sparsejld.n,
-                    sparsejld.colptr,
-                    sparsejld.rowval,
-                    sparsejld.nzval)
-end
+# # I had trouble to load SparseMatrix via jld, but after loading jld-file works with ..
+# function fix_coords(sparsejld)
+#     SparseMatrixCSC(sparsejld.m,
+#                     sparsejld.n,
+#                     sparsejld.colptr,
+#                     sparsejld.rowval,
+#                     sparsejld.nzval)
+# end
