@@ -9,6 +9,6 @@ Pkg.clone("https://github.com/mirestrepo/PlotlyJSFactory.jl.git")
 
 ## Additional functionality
 
-| [Chord diagram from a network/graph](http://nbviewer.jupyter.org/github/mirestrepo/PlotlyJSFactory.jl/blob/master/examples/chord_plot_julia1.ipynb)|
+| [Chord diagram from a network/graph](http://nbviewer.jupyter.org/github/mbphil/PlotlyJSFactory.jl/blob/master/examples/chord_plot_julia1.ipynb)|
 |:-----------------:|
-| [<img src="./figures/cocurrence_graph_epilepsy.png" alt="Drawing" style="width: 200px;"/>](http://nbviewer.jupyter.org/github/mirestrepo/PlotlyJSFactory.jl/blob/master/examples/chord_plot_julia1.ipynb)|
+| [<img src="./figures/cocurrence_graph_epilepsy.png" alt="Drawing" style="width: 200px;"/>](http://nbviewer.jupyter.org/github/mbphil/PlotlyJSFactory.jl/blob/master/examples/chord_plot_julia1.ipynb)|
