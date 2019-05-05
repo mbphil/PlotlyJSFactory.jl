@@ -125,7 +125,8 @@ function create_chord_plot(affinity_mat; labels::Vector{String} = Vector{String}
     # Attributes for Axes inside Layout()
     axis_attr = attr(showline=false, zeroline=false, showgrid=false, showticklabels=false)
     # Layout
-    layout = Layout(showlegend=false, autosize=true, showgrid=false,
+    # instead autosize=true use: at least for jupyter-example
+    layout = Layout(showlegend=false, width=930, height=1000, showgrid=false,
                     margin = Dict(:t=> 70, :r=> 0, :l=> 0, :b=>0),
                     xaxis = axis_attr,
                     yaxis = axis_attr,
